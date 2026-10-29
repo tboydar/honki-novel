@@ -8,12 +8,12 @@ SRC = os.path.join(ROOT, "novel")
 CHAP = os.path.join(SRC, "chapters")
 DOCS = os.path.join(ROOT, "docs")
 IMG = os.path.join(DOCS, "images")
-VERSION = "v20261029.3"
+VERSION = "v20261029.4"
 TITLE = "重生之 Debug 博士逆轉台北"
 TAGLINE = "帶著八十年的記憶，再戰一次台北。"
 SITE_URL = "https://tboydar.github.io/honki-novel/"
 DESC = ("2061 年，八十歲的 Debug 博士死在沒有人相信真相的台北；再睜眼，他回到投票前三十三天。"
-        "這一世，他帶著一個講台灣國語的洋人 AI 妹妹，要讓「深偽之夜」永遠不會發生。都市重生 × 科技選戰 × 打詐爽文。")
+        "這一世，他帶著一個講台灣國語的洋人 AI 妹妹，要讓「深偽之夜」永遠不會發生。都市重生 × 科技選戰 × 打詐快意小說。")
 
 def esc(s): return html.escape(s, quote=True)
 def read(p):
@@ -69,8 +69,8 @@ CHARACTERS = [
     ("艾莉絲", "金手指", "來自 2061 年的洋人 AI 妹妹，寄宿在Debug 博士的眼鏡上，只有他看得到。超級智慧，但中文是看夜市影片學的，滿口台灣國語，畢生心願是吃一碗滷肉飯。"),
     ("秀蘭嬤", "萬華滷肉飯", "巷口滷肉飯攤的阿嬤，Debug 博士學生時代的飯票恩人。前世被一支深偽投資影片騙光退休金——這一世，絕不。"),
     ("林曉晴", "開源志工", "資料記者、開源社群志工，最討厭作秀的政治人物。直到她看見Debug 博士把照妖鏡開源給所有陣營。"),
-    ("阿凱", "吐槽擔當", "Debug 博士以前的學生，前端工程師，嘴砲但可靠，飯糰不離手。"),
-    ("Kevin", "被打臉專業戶", "百萬訂閱科技網紅，第一章就嗆「技術召集人？超級智障吧」，然後……被打臉打到懷疑人生。"),
+    ("阿凱", "吐槽擔當", "Debug 博士以前的學生，前端工程師，愛耍嘴皮子但可靠，飯糰不離手。"),
+    ("Kevin", "被打臉專業戶", "百萬訂閱科技網紅，第一章就嗆「技術召集人？超級外行吧」，然後……被打臉打到懷疑人生。"),
     ("莫無影", "反派", "幻鏡科技執行長、深偽集團「鏡淵」首腦。永遠戴著一張完美得不像真人的臉。「我有十萬張臉。」"),
 ]
 
@@ -344,8 +344,8 @@ def storyboard_html(no):
     has_audio = os.path.exists(os.path.join(DOCS, audio))
     btn = (f'<button class="tbtn" data-sb-audio="{audio}" aria-label="播放本章旁白">▶ 聽旁白</button>' if has_audio else "")
     credit = "<span>旁白為 AI 合成配音，非任何真人聲音</span>" if has_audio else "<span></span>"
-    return f"""<section class="sb" aria-label="一分鐘爽讀">
-<h2 class="sb-h display"><span>一分鐘爽讀</span><small>{len(SB[no])} 格漫劇分鏡，先爽再讀</small>{btn}</h2>
+    return f"""<section class="sb" aria-label="一分鐘悅讀">
+<h2 class="sb-h display"><span>一分鐘悅讀</span><small>{len(SB[no])} 格漫劇分鏡，先睹為快</small>{btn}</h2>
 {storyboard_grid(no)}
 <p class="sb-skip">{credit}<a href="#body">↓ 讀完整正文</a></p>
 </section>"""
@@ -461,7 +461,7 @@ def comic_page():
 <main class="read">
 <p class="kicker"><span class="seal">漫劇版</span><span>{n} 格分鏡</span></p>
 <h1 class="title display">五分鐘看完全書</h1>
-<p class="when">每章八格：鉤子、壓、壓、轉、爽、打臉、情緒、卡點。看到想看的，點進去讀完整正文。</p>
+<p class="when">每章八格：鉤子、蓄勢、蓄勢、轉折、快意、揭曉、動情、懸念。看到想看的，點進去讀完整正文。</p>
 <div class="sb">
 {chs}
 </div>
@@ -541,8 +541,8 @@ def index_page():
 <section>
 <h2 class="sec display">緣起</h2>
 <div class="panel">
-<p>某天早上，一位朋友在臉書留言許願：「想看一部中國網文風格的博士重生爽文。」</p>
-<p>既然來了，那就來吧。於是有了這部小說——<strong>網文的骨架</strong>：重生、系統、打臉、反轉；<strong>台灣的血肉</strong>：滷肉飯、捷運、夜市阿姨與 165；<strong>還有一顆有用的心</strong>：每一章都附一堂「Debug 小教室」，讀完爽文，順便學會怎麼不被深偽和詐騙騙。</p>
+<p>某天早上，一位朋友在臉書留言許願：「想看一部中國網文風格的博士重生小說。」</p>
+<p>既然來了，那就來吧。於是有了這部小說——<strong>網文的骨架</strong>：重生、系統、打臉、反轉；<strong>台灣的血肉</strong>：滷肉飯、捷運、夜市阿姨與 165；<strong>還有一顆有用的心</strong>：每一章都附一堂「Debug 小教室」，讀完這部快意小說，順便學會怎麼不被深偽和詐騙騙。</p>
 <p>全書 {len(NOS)} 章，約 {total:,} 字。</p>
 </div>
 </section>
