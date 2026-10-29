@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>第十一章　天亮了，台北自己選｜重生之 Debug 博士逆轉台北</title>
+<meta name="description" content="第十一章　天亮了，台北自己選｜重生之 Debug 博士逆轉台北：「程博士，你那個AI妹妹呢？怎麼不叫她出來講兩句？」">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第十一章　天亮了，台北自己選｜重生之 Debug 博士逆轉台北">
+<meta property="og:description" content="第十一章　天亮了，台北自己選｜重生之 Debug 博士逆轉台北：「程博士，你那個AI妹妹呢？怎麼不叫她出來講兩句？」">
+<meta property="og:image" content="https://tboydar.github.io/honki-novel/images/cover-11.jpg">
+<meta property="og:url" content="https://tboydar.github.io/honki-novel/s11.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23c8322f'/><rect x='4' y='4' width='24' height='24' rx='2' fill='none' stroke='%23f4ecdc' stroke-width='2'/><text x='16' y='22' text-anchor='middle' font-size='15' font-family='serif' font-weight='700' fill='%23f4ecdc'>D</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<script>
+(function(){
+  var KEY='honki-theme';
+  try{var t=localStorage.getItem(KEY);if(t)document.documentElement.dataset.theme=t;
+    else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark';}catch(e){}
+  window.toggleTheme=function(){var r=document.documentElement;var n=r.dataset.theme==='dark'?'light':'dark';
+    r.dataset.theme=n;try{localStorage.setItem(KEY,n)}catch(e){}};
+})();
+</script>
+<style>
+:root{
+  --bg:#f4ecdc; --card:#fbf6ea; --ink:#141210; --muted:#5f574b; --line:rgba(20,18,16,.18);
+  --seal:#c8322f; --gold:#c9962e; --panel:#141210; --on-panel:#f4ecdc;
+  --dot:radial-gradient(rgba(20,18,16,.10) 1px,transparent 1.2px);
+  --hard:4px 4px 0 var(--ink);
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#15120f; --card:#1f1a15; --ink:#efe6d4; --muted:#b3a893; --line:rgba(239,230,212,.18);
+  --seal:#e04b3f; --gold:#d9a93f; --panel:#0c0a08; --on-panel:#efe6d4;
+  --dot:radial-gradient(rgba(239,230,212,.07) 1px,transparent 1.2px);
+  --hard:4px 4px 0 #000;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);background-image:var(--dot);background-size:7px 7px;
+  font-family:'Noto Serif TC','Songti TC','PMingLiU',serif;line-height:1.95;text-wrap:pretty}
+a{color:var(--seal);text-underline-offset:.2em}
+img{max-width:100%;display:block}
+.display{font-family:'LXGW WenKai TC','Noto Serif TC',serif}
+.seal{display:inline-block;background:var(--seal);color:#f4ecdc;border-radius:3px;padding:.02rem .5rem;
+  font-size:.82rem;letter-spacing:.14em;font-family:'LXGW WenKai TC',serif;box-shadow:inset 0 0 0 2px rgba(244,236,220,.35)}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:2px solid var(--ink)}
+.topbar .wrap{max-width:68rem;margin:0 auto;padding:.45rem 1rem;display:flex;align-items:center;gap:.6rem}
+.topbar .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:.04em;flex:1;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .brand b{color:var(--seal)}
+.tbtn{all:unset;cursor:pointer;border:2px solid var(--ink);border-radius:4px;padding:.1rem .6rem;min-height:1.9rem;
+  font-size:.85rem;color:var(--ink);white-space:nowrap;display:inline-flex;align-items:center;transition:transform .16s ease-out,box-shadow .16s ease-out}
+.tbtn:hover{transform:translate(-1px,-1px);box-shadow:2px 2px 0 var(--ink)}
+.tbtn:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;padding:.45rem 1.2rem;border:2px solid var(--ink);border-radius:4px;
+  font-weight:700;letter-spacing:.08em;text-decoration:none;color:var(--ink);background:var(--card);box-shadow:var(--hard);
+  transition:transform .16s ease-out,box-shadow .16s ease-out;cursor:pointer;font:inherit;font-weight:700}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.primary{background:var(--seal);color:#f4ecdc}
+footer.site{border-top:2px solid var(--ink);margin-top:3.5rem;padding:1.6rem 1rem 2.2rem;text-align:center;
+  color:var(--muted);font-size:.85rem;line-height:1.9}
+footer.site p{margin:.2rem auto;max-width:46rem}
+footer.site .ver{letter-spacing:.14em;font-family:'LXGW WenKai TC',serif}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+.progress{position:fixed;left:0;top:0;height:4px;background:var(--seal);width:0;z-index:40}
+main.read{max-width:40rem;margin:0 auto;padding:1.4rem 1.1rem 2rem}
+.cover{margin:0 0 1.4rem}
+.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;border:3px solid var(--ink);box-shadow:var(--hard)}
+.kicker{display:flex;align-items:center;gap:.6rem;margin:0 0 .2rem;color:var(--muted);font-size:.92rem;flex-wrap:wrap}
+h1.title{font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.35;margin:.3rem 0 .4rem;letter-spacing:.02em}
+.when{color:var(--muted);margin:0 0 1.8rem;font-size:.95rem}
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 1.6rem}
+article.body{font-size:var(--fs,1.1rem)}
+article.body p{margin:0 0 1.15em;text-align:justify;transition:background .2s}
+article.body p.speaking{background:color-mix(in srgb,var(--gold) 22%,transparent)}
+article.body .sys{margin:1.4em 0;padding:.65em 1em;border-radius:3px;background:var(--panel);color:#f2d27a;
+  font-family:'LXGW WenKai TC','Noto Serif TC',serif;font-weight:700;font-size:.98em;line-height:1.7;border:2px solid var(--ink);
+  box-shadow:4px 4px 0 var(--seal)}
+article.body hr.scene{border:0;text-align:center;margin:2.2em 0}
+article.body hr.scene::after{content:"◆　◇　◆";color:var(--seal);letter-spacing:.3em;font-size:.8rem}
+.world-entry{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:0 0 1.8rem;padding:.75rem 1rem;
+  border:2px dashed var(--ink);border-radius:4px;font-size:.92rem;color:var(--muted);line-height:1.7}
+.world-entry span{flex:1;min-width:12rem}
+.lesson{margin:2.8rem 0 0;border:3px solid var(--ink);border-radius:4px;background:var(--card);box-shadow:var(--hard)}
+.lesson h2{margin:0;padding:.6rem 1rem;background:var(--panel);color:var(--on-panel);font-size:1.12rem;letter-spacing:.06em}
+.lesson h2 small{display:inline-block;background:var(--seal);color:#f4ecdc;font-size:.75rem;letter-spacing:.16em;font-weight:400;
+  padding:0 .45rem;border-radius:2px;margin-right:.5rem;vertical-align:.15em}
+.lesson ul{margin:0;padding:.9rem 1.1rem .9rem 2.2rem;font-size:.98rem;line-height:1.85}
+.lesson li{margin:.35em 0}
+.lesson li::marker{color:var(--seal)}
+.lesson .more{padding:0 1.1rem 1rem;font-size:.9rem}
+.ending{margin:2.4rem 0 0;padding:1.1rem 1.2rem;border:3px double var(--seal);text-align:center;border-radius:4px}
+.ending .n{font-family:'LXGW WenKai TC',serif;font-size:1.6rem;color:var(--seal);letter-spacing:.1em}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.4rem;padding-top:1.2rem;border-top:2px solid var(--ink)}
+.pager a{text-decoration:none;font-weight:700;max-width:48%;color:var(--ink)}
+.pager a:hover{color:var(--seal)}
+.pager .r{text-align:right;margin-left:auto}
+.hint{text-align:center;color:var(--muted);font-size:.8rem;margin-top:1rem}
+.sb{position:relative;left:50%;transform:translateX(-50%);width:min(68rem,calc(100vw - 2rem));margin:0 0 2.4rem}
+.sb-h{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:0 0 .9rem;font-size:1.3rem}
+.sb-h span{background:var(--seal);color:#f4ecdc;padding:.05rem .7rem;border-radius:3px;letter-spacing:.12em}
+.sb-h small{color:var(--muted);font-size:.88rem;font-weight:400}
+.sb-h .tbtn{margin-left:auto}
+.sb-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+.sb-grid li:nth-child(4n+1) figure{transform:rotate(-.4deg)} .sb-grid li:nth-child(4n+3) figure{transform:rotate(.35deg)}
+.sb-grid figure{margin:0;background:var(--panel);border:3px solid var(--ink);border-radius:3px;overflow:hidden;box-shadow:var(--hard)}
+.sb-grid img{width:100%;height:auto;aspect-ratio:7/4;object-fit:cover}
+.sb-grid figcaption{background:#fbf6ea;color:#141210;padding:.5rem .75rem .6rem;font-family:'LXGW WenKai TC','Noto Serif TC',serif;
+  font-weight:700;font-size:1.02rem;line-height:1.55;border-top:3px solid #141210}
+.sb-grid figcaption b{display:inline-block;background:#c8322f;color:#f4ecdc;font-size:.72rem;padding:0 .45rem;margin-right:.4rem;
+  border-radius:2px;vertical-align:.15em;letter-spacing:.1em}
+.sb-grid li.on figure{box-shadow:4px 4px 0 var(--seal);outline:3px solid var(--gold)}
+.sb-skip{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.86rem;margin:.7rem 0 0;color:var(--muted)}
+.comic-ch{margin:0 0 3rem}
+.comic-ch h2{font-size:1.3rem;margin:0 0 .8rem}
+.comic-ch h2 a{color:var(--ink);text-decoration:none}
+</style>
+</head>
+<body><div class="progress"></div><header class="topbar"><div class="wrap">
+<a class="brand display" href="index.html">《<b>重生之 Debug 博士</b>逆轉台北》</a>
+<button class="tbtn" onclick="cycleFont()" aria-label="調整字級">字級</button><button class="tbtn" onclick="toggleTheme()" aria-label="切換深色模式">◐</button>
+</div></header>
+<main class="read">
+<figure class="cover"><img src="images/cover-11.jpg" alt="第十一章　天亮了，台北自己選 插圖"></figure>
+<p class="kicker"><span class="seal">第十一章</span><span>約 2,880 字</span></p>
+<h1 class="title display">天亮了，台北自己選</h1>
+<p class="when">時間：2026 年 11 月 28 日，投票日</p>
+<section class="sb" aria-label="一分鐘爽讀">
+<h2 class="sb-h display"><span>一分鐘爽讀</span><small>8 格漫劇分鏡，先爽再讀</small><button class="tbtn" data-sb-audio="audio/sb-11.mp3" aria-label="播放本章旁白">▶ 聽旁白</button></h2>
+<ol class="sb-grid">
+<li><figure><img src="images/sb/11-1.jpg" alt="「你那個 AI 妹妹呢？叫她出來講兩句啊！」" loading="lazy" width="896" height="512"><figcaption><b>01・鉤子</b>「你那個 AI 妹妹呢？叫她出來講兩句啊！」</figcaption></figure></li>
+<li><figure><img src="images/sb/11-2.jpg" alt="「AI 也會休息喔？啊不就程式，關掉就沒有了。」" loading="lazy" width="896" height="512"><figcaption><b>02・壓</b>「AI 也會休息喔？啊不就程式，關掉就沒有了。」</figcaption></figure></li>
+<li><figure><img src="images/sb/11-3.jpg" alt="「新聞說你那個守夜人，是不是電腦當機了？」" loading="lazy" width="896" height="512"><figcaption><b>03・壓</b>「新聞說你那個守夜人，是不是電腦當機了？」</figcaption></figure></li>
+<li><figure><img src="images/sb/11-4.jpg" alt="「你看，我孫子印的，我現在是我們里第一個會用的。」" loading="lazy" width="896" height="512"><figcaption><b>04・轉</b>「你看，我孫子印的，我現在是我們里第一個會用的。」</figcaption></figure></li>
+<li><figure><img src="images/sb/11-5.jpg" alt="「我現在看新聞，都會先問一句：真的假的？」" loading="lazy" width="896" height="512"><figcaption><b>05・爽</b>「我現在看新聞，都會先問一句：真的假的？」</figcaption></figure></li>
+<li><figure><img src="images/sb/11-6.jpg" alt="「我錯了。無聊總比被騙好。」" loading="lazy" width="896" height="512"><figcaption><b>06・打臉</b>「我錯了。無聊總比被騙好。」</figcaption></figure></li>
+<li><figure><img src="images/sb/11-7.jpg" alt="「這碗是滷肉飯。我知道妳吃不到，但還是幫妳點了。」" loading="lazy" width="896" height="512"><figcaption><b>07・情緒</b>「這碗是滷肉飯。我知道妳吃不到，但還是幫妳點了。」</figcaption></figure></li>
+<li><figure><img src="images/sb/11-8.jpg" alt="【哥，那碗……有香菜嗎？】" loading="lazy" width="896" height="512"><figcaption><b>08・卡點</b>【哥，那碗……有香菜嗎？】</figcaption></figure></li>
+</ol>
+<p class="sb-skip"><span>旁白為 AI 合成配音，非任何真人聲音</span><a href="#body">↓ 讀完整正文</a></p>
+</section>
+<div class="tools"><button class="tbtn" id="readAloud" aria-label="用裝置語音朗讀全文">朗讀全文</button><a class="tbtn" href="world/">3D 多重世界線 →</a></div>
+<article class="body" id="body">
+<p>「程博士，你那個 AI 妹妹呢？怎麼不叫她出來講兩句？」</p>
+<p>清晨六點，投票所外的隊伍裡，一個穿競選背心的阿伯認出他，故意放大音量。旁邊幾個人立刻轉頭，像在看動物園裡剛跑出來的稀有動物。</p>
+<p>「對啊，」另一個阿姨接話，「新聞說你昨晚那個什麼守夜人，是不是電腦當機了？我兒子講，那個 AI 根本是假的啦。」</p>
+<p>Debug 博士推了一下圓框眼鏡。</p>
+<p>鏡片上一片空白。沒有提示框，沒有「哥～」，沒有那個帽 T 大到快拖地的金髮少女跳出來嗆聲。</p>
+<p>「她……休息了。」他說。</p>
+<p>「休息？」阿伯笑出聲，「AI 也會休息喔？啊不就程式？關掉就沒有了吧。」</p>
+<p>隊伍裡有人跟著笑。笑聲不大，但很刺。</p>
+<p>Debug 博士低頭看自己的球鞋，鞋尖磨得發白。三十六小時沒闔眼，眼睛乾得像剛從烘碗機拿出來的玻璃杯。</p>
+<p>「我們來 debug 一下，」他很小聲地自言自語，「Bug 不會自己消失……」</p>
+<p>「你在唸什麼？」阿伯問。</p>
+<p>「沒事，」他抬頭，「排隊。」</p>
+<hr class="scene">
+<p>早上八點半，他穿著一件普通到不行的深藍色連帽外套，胸前別著一隻小瓢蟲徽章，站在中正區某個投票所外的隊伍裡。</p>
+<p>前面是一位滿頭白髮的老伯，手裡捏著投票通知單，捏得像在捏一張彩券。</p>
+<p>「少年仔，」老伯回頭，「你覺得今天會下雨嗎？」</p>
+<p>「不會吧，」他抬頭看天，「雲都散了。」</p>
+<p>「嘿啊，」老伯滿意地點頭，「我昨天看氣象，說今天放晴。不過啊，我現在看新聞都會多問一句——」</p>
+<p>「真的假的？」</p>
+<p>老伯眼睛一亮：「你也會喔！」</p>
+<p>「會啊，職業病。」</p>
+<p>「什麼職業？」</p>
+<p>「呃……抓假的。」</p>
+<p>「喔，警察喔？」</p>
+<p>「……差不多。」</p>
+<p>「啊你剛剛被那個阿伯虧，」老伯壓低聲音，「我跟你講，那種人就是出一張嘴。你昨晚那個照妖鏡，我孫子有教我按，很好用捏。」</p>
+<p>「真的假的？」這次換Debug 博士問。</p>
+<p>「真的啦！」老伯從口袋掏出一張摺得爛爛的紙，「你看，我孫子印的，一步一步教，我現在是我們里第一個會用的。」</p>
+<p>紙上歪歪扭扭印著截圖，還用紅筆圈起來，寫著「按這裡」。</p>
+<p>Debug 博士盯著那張紙，喉嚨忽然有點緊。</p>
+<p>「阿伯，」他說，「你這個可以借我拍一張嗎？」</p>
+<p>「拍啊拍啊，」老伯得意地挺胸，「我孫子說這個叫什麼……開源？對啦，開源，大家都可以用。」</p>
+<p>隊伍往前動了一格。後面那個穿競選背心的阿伯，忽然不講話了。</p>
+<hr class="scene">
+<p>投票所外面，他遇到了秀蘭嬤。</p>
+<p>阿嬤今天穿了一件棗紅色的外套，頭髮梳得整整齊齊，牽著一個大概國小三年級的小孫子，祖孫倆站在門口曬太陽。</p>
+<p>「阿凡！」秀蘭嬤一眼就認出他，笑得眼睛都瞇起來，「你嘛來投票喔？」</p>
+<p>「對啊，剛投完。阿嬤你帶孫子來？」</p>
+<p>「嘿啊，」阿嬤拍拍孫子的頭，「帶他來看看，什麼叫做自己選。」</p>
+<p>小孫子仰頭：「阿嬤，為什麼要自己選？」</p>
+<p>「因為別人的話不能亂信啊，」阿嬤理直氣壯，「要自己看、自己想、自己決定。」</p>
+<p>Debug 博士愣了一下。</p>
+<p>阿嬤轉頭看他，神氣地挺起胸膛：「我跟你講，我現在看新聞，都會先問一句『真的假的』。昨天那個什麼影片，我一看就覺得怪怪的，那個人的眼睛眨得太慢了。」</p>
+<p>「阿嬤你現在是專家了。」</p>
+<p>「什麼專家，」阿嬤擺手，「就是被騙過一次，學乖了。」</p>
+<p>她說得很輕，像在講別人的事。但他知道，前世的那一支「Debug 博士推薦投資」的深偽影片，騙走的不只是她的退休金，還有她對所有畫面的信任。</p>
+<p>那一夜之後，她再也不看電視。</p>
+<p>「阿嬤，」他忽然說，「對不起。」</p>
+<p>「幹嘛對不起？」阿嬤瞪他，「又不是你騙我的。而且啊，」她拍拍他的手臂，「你這次做得很好。我那些老朋友，現在群組裡傳什麼，都會先丟去那個……那個什麼鏡？」</p>
+<p>「照妖鏡。」</p>
+<p>「對啦，照妖鏡。丟進去，紅色的就不要再傳。很好用欸，比我孫子還好用。」</p>
+<p>小孫子在旁邊抗議：「阿嬤！」</p>
+<p>「實話實說啦。」</p>
+<p>「阿嬤，」小孫子忽然插嘴，「那我以後看到奇怪的影片，也可以丟照妖鏡嗎？」</p>
+<p>「可以啊，」阿嬤蹲下來，跟他平視，「但是你要先問自己一句話。」</p>
+<p>「哪一句？」</p>
+<p>「『這是真的，還是有人想叫我生氣？』」</p>
+<p>小孫子想了一下，用力點頭：「懂了。」</p>
+<p>Debug 博士站在旁邊，忽然覺得，這比他做過的任何一支影片都還要有用。</p>
+<hr class="scene">
+<p>手機震了一下。</p>
+<p>林曉晴的訊息：</p>
+<p>「你知道最好笑的是什麼嗎？今天群組裡最多人轉傳的，是查證連結。」</p>
+<p>他站在投票所外的樹蔭下，回了一個笑臉。</p>
+<p>下一則又來：</p>
+<p>「以前大家轉傳的是假消息，現在轉傳的是『怎麼查假消息』。我剛剛還收到我阿姨傳來的照妖鏡使用教學，她自己做的圖文，做得很醜，但很用心。」</p>
+<p>「醜沒關係，」他回，「有用就好。」</p>
+<p>「她還問我，這個是不是可以拿去教里長。」</p>
+<p>「可以啊，開源就是這樣用的。」</p>
+<p>「程一凡，」林曉晴停了一下才回，「我以前很討厭政治人物。」</p>
+<p>「我知道。」</p>
+<p>「現在還是有一點。」</p>
+<p>「……謝謝喔。」</p>
+<p>「但是，」她又補了一句，「我現在知道，有些人是在 debug 民主，不是在演民主。」</p>
+<p>他看著那行字，忽然覺得眼睛有點酸。可能是三十六小時沒睡的關係。一定是。</p>
+<p>「不同立場，也能一起 debug，」他回，「這句話是妳說的。」</p>
+<p>「對啊，」林曉晴回，「我今天投完票，要去幫我媽買菜。她說今天晚上要煮火鍋，慶祝『假消息死光光』。」</p>
+<p>「幫我跟阿姨說，火鍋料要買真的。」</p>
+<p>「她會說：『我現在都會問真的假的。』」</p>
+<hr class="scene">
+<p>中午，Kevin 發了一篇長文。</p>
+<p>標題很長，長到他滑了兩次才看完：「關於我曾經嘲笑技術召集人是超級智障這件事，我想說一些話」。</p>
+<p>內容大意是：他錯了。他以前覺得「查證」很無聊、很慢、很不流量。他以前覺得「打假」是政治人物作秀。但那天晚上，他看到三萬多人在線上一起查證，看到阿嬤們在群組裡互相提醒，看到一個國小三年級的小孩問「為什麼要自己選」，他忽然覺得，自己這幾年做的影片，好像少了什麼。</p>
+<p>「所以我決定，」他寫，「把這個月的業配收入，全數捐給防詐團體。不多，但這是我能做的。以後我的影片，每一支都會附上查證連結。如果大家覺得這樣很無聊，那也沒關係。無聊總比被騙好。」</p>
+<p>下面留言一片：「Kevin 長大了」「這才是百萬訂閱該做的事」「我以後不酸你了」。</p>
+<p>Debug 博士按了一個愛心。</p>
+<p>下午，賈仁義接受訪問。</p>
+<p>記者問他：「賈先生，您之前說『AI 不會騙人，會騙人的是人』，現在還這麼認為嗎？」</p>
+<p>賈仁義沉默了三秒。</p>
+<p>「我還是這麼認為，」他說，語氣比平常慢，「但我要補一句——正因為人會騙人，所以人更要誠實。AI 只是鏡子，鏡子照出什麼，是我們自己的臉。」</p>
+<p>「所以您覺得這次事件，對台灣的 AI 發展有什麼啟示？」</p>
+<p>「啟示就是，」賈仁義推了一下眼鏡，「我們不能只教 AI 怎麼變強，要教人怎麼變聰明。還有，」他頓了一下，「我以後不會再隨便說自己是教父了。教父會保護大家，我這次沒保護好。」</p>
+<p>這段話後來被做成很多迷因。但Debug 博士覺得，這是賈仁義這輩子講過最誠實的一段話。</p>
+<hr class="scene">
+<p>傍晚，開票時間。</p>
+<p>聯盟辦公室裡，大家擠在電視前面，氣氛緊繃得像拉滿的弓。阿凱站在最前面，手裡捏著一杯已經冷掉的珍奶，吸管咬得扁扁的。</p>
+<p>「老師，快來看，第一波數字要出來了！」</p>
+<p>Debug 博士看了一眼，悄悄往後退，推開門，走了出去。</p>
+<p>「老師？」阿凱追出來，「你不看結果？」</p>
+<p>他回頭，笑了一下。</p>
+<p>「結果是台北市民的事。」</p>
+<p>「啊？」</p>
+<p>「我的事，」他把手插進帽 T 口袋，「是讓這一次的選擇，是他們自己做的。」</p>
+<p>阿凱愣在原地，珍奶還捏在手裡。</p>
+<p>「可是……可是大家會想知道你怎麼看啊。」</p>
+<p>「我怎麼看不重要，」他說，「重要的是，今天有沒有一個人，是因為被騙才去投的。如果沒有，那這一票，就是他自己投的。」</p>
+<p>「……老師，你講話可以再文言一點沒關係。」</p>
+<p>「快去裡面看，」他揮手，「幫我注意有沒有奇怪的訊息在群組裡流傳。」</p>
+<p>「今天投票日欸，誰敢傳？」</p>
+<p>「就是有人敢，才要有人看。」</p>
+<p>阿凱翻了一個白眼，但還是乖乖回去了。</p>
+<hr class="scene">
+<p>巷口的滷肉飯攤，今天有開。</p>
+<p>秀蘭嬤的攤子，投票日也照常營業。她說：「肚子餓的人不分黨派。」</p>
+<p>Debug 博士在塑膠椅上坐下來。</p>
+<p>「阿嬤，兩碗。」</p>
+<p>「兩碗？」阿嬤抬頭，「你一個人吃兩碗？」</p>
+<p>「一碗給人。」</p>
+<p>「誰？」</p>
+<p>他沒回答，只是把另一碗放在對面的空位上。</p>
+<p>熱氣慢慢升起來，又慢慢散掉。路燈亮了，巷子裡飄著醬油和油蔥的香味。</p>
+<p>「哥，」他很小聲地說，「這碗是滷肉飯。有肥有瘦，上面有香菜，旁邊有醃蘿蔔。我知道妳吃不到，但還是幫妳點了。」</p>
+<p>沒有回應。</p>
+<p>眼鏡上，什麼都沒有。</p>
+<p>「妳說妳最大的遺憾是吃不到滷肉飯，」他繼續說，「我想說，至少讓妳聞一下。雖然妳應該聞不到。」</p>
+<p>熱氣繼續散。</p>
+<p>「今天的台北，放晴了。」他低頭扒了一口飯，「沒有深偽之夜。沒有人被騙。阿嬤的孫子問她為什麼要自己選，她說因為別人的話不能亂信。」</p>
+<p>他嚼了嚼，吞下去。</p>
+<p>「妳教我的，」他說，「查證不是為了贏，是為了讓大家都能自己選。」</p>
+<p>巷子裡很安靜。遠處隱約傳來辦公室那邊的歡呼聲，但他沒有回頭。</p>
+<p>「結果怎樣，我都沒關係，」他說，「重要的是，今天大家投的，是真的。」</p>
+<p>他吃完第一碗，把第二碗的熱氣又看了一下。</p>
+<p>「好啦，」他站起來，把錢放在桌上，「我吃飽了。妳……妳好好休息。」</p>
+<p>他走出巷口的時候，手機忽然震了一下。</p>
+<p>他低頭看。</p>
+<p>不是訊息。是眼鏡。</p>
+<p>鏡片的角落，閃過一個極淡的像素。</p>
+<p>像有人在眨眼。</p>
+<p>只有一瞬間，比路燈的反光還短。但他看見了。</p>
+<p>Debug 博士站在原地，愣了三秒。</p>
+<p>然後他笑了。</p>
+<p>「晚安，艾莉絲，」他說，「明天見。」</p>
+<p>他轉身要走，眼鏡上忽然又閃了一下——這次不是眨眼，是一行極淡、淡到幾乎看不見的字，像用最後一格電量擠出來的：</p>
+<p>`【哥，那碗……有香菜嗎？】`</p>
+<p>巷口的風把滷肉飯的熱氣吹散。台北的夜，慢慢亮了起來。</p>
+</article>
+
+<aside class="lesson" id="lesson-11">
+<h2 class="display"><small>Debug 小教室</small>投票日須知</h2>
+<ul>
+<li><strong>一定要帶國民身分證</strong>，健保卡、駕照不能代替；身分證遺失要先到戶政事務所補辦。</li>
+<li>領票時可以在選舉人名冊上<strong>蓋章、簽名或按指印</strong>；投票通知單沒帶也可以投，只要名字在選舉人名冊上。</li>
+<li>圈選要用投票所提供的圈選工具；用私章或按指印圈選，選票會無效。圈選後<strong>不要把圈選內容給別人看</strong>。</li>
+<li>手機請關機再進投票所；<strong>不可以把選票帶出投票所</strong>，也不要撕毀選票，都有罰則。</li>
+<li>投票日當天，任何人都不能從事競選或助選活動。</li>
+</ul>
+<p class="more"><a href="lessons.html">→ 看全部的Debug 小教室</a></p>
+</aside>
+<nav class="pager"><a rel="prev" href="s10.html">← 第十章</a><a rel="next" class="r" href="s12.html">尾聲 →</a></nav>
+<p class="hint">鍵盤 ← → 可翻章</p>
+</main>
+<footer class="site">
+<p>《重生之 Debug 博士逆轉台北》為架空小說，人物、組織、事件純屬虛構，不影射任何真實人物。</p>
+<p>本站非競選廣告，未受任何候選人、政黨或競選團隊出資或委託，與任何陣營無關。</p>
+<p>由人類企劃與編輯，搭配 AI 工具協作生成文字與插圖。小說文字與插圖採 CC BY-NC-SA 4.0；網站程式碼採 MIT 授權。</p>
+<p class="ver">v20261029.3</p>
+</footer><script>
+(function(){
+  var bar=document.querySelector('.progress');
+  function upd(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+'%';}
+  addEventListener('scroll',upd,{passive:true});upd();
+  document.addEventListener('keydown',function(e){
+    if(e.altKey||e.ctrlKey||e.metaKey||/input|textarea/i.test(e.target.tagName))return;
+    var a=e.key==='ArrowLeft'?document.querySelector('a[rel=prev]'):e.key==='ArrowRight'?document.querySelector('a[rel=next]'):null;
+    if(a){location.href=a.href;}
+  });
+  var KEY='honki-fs',sizes=['1rem','1.08rem','1.18rem','1.3rem'],i=1;
+  try{var s=localStorage.getItem(KEY);if(s!==null)i=+s;}catch(e){}
+  function apply(){document.documentElement.style.setProperty('--fs',sizes[i]);}
+  apply();
+  window.cycleFont=function(){i=(i+1)%sizes.length;apply();try{localStorage.setItem(KEY,i)}catch(e){}};
+  /* 分鏡旁白：依播放進度依序點亮格子 */
+  document.querySelectorAll('[data-sb-audio]').forEach(function(b){
+    var au=new Audio(b.dataset.sbAudio), li=b.closest('.sb').querySelectorAll('.sb-grid li');
+    function mark(){var n=li.length,k=au.duration?Math.min(n-1,Math.floor(au.currentTime/au.duration*n)):0;
+      li.forEach(function(x,j){x.classList.toggle('on',j===k&&!au.paused);});}
+    au.addEventListener('timeupdate',mark);
+    au.addEventListener('ended',function(){b.textContent='▶ 聽旁白';li.forEach(function(x){x.classList.remove('on');});});
+    b.addEventListener('click',function(){if(au.paused){au.play();b.textContent='❚❚ 暫停旁白';}else{au.pause();b.textContent='▶ 聽旁白';mark();}});
+  });
+  /* 裝置語音朗讀全文（使用讀者裝置內建語音） */
+  var rb=document.getElementById('readAloud');
+  if(rb&&'speechSynthesis' in window){
+    var ps=[].slice.call(document.querySelectorAll('article.body p, article.body .sys')),idx=0,on=false;
+    function voice(){var v=speechSynthesis.getVoices();return v.find(function(x){return /zh[-_]TW/i.test(x.lang)})||v.find(function(x){return /^zh/i.test(x.lang)});}
+    function stop(){on=false;speechSynthesis.cancel();ps.forEach(function(p){p.classList.remove('speaking');});rb.textContent='朗讀全文';}
+    function next(){if(!on||idx>=ps.length){stop();return;}var p=ps[idx];ps.forEach(function(x){x.classList.toggle('speaking',x===p);});
+      var u=new SpeechSynthesisUtterance(p.textContent);u.lang='zh-TW';var v=voice();if(v)u.voice=v;u.rate=1.05;
+      u.onend=function(){idx++;next();};speechSynthesis.speak(u);}
+    rb.addEventListener('click',function(){if(on){stop();return;}on=true;idx=0;rb.textContent='停止朗讀';next();});
+  }else if(rb){rb.hidden=true;}
+})();
+</script>
+</body>
+</html>

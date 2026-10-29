@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>第六章　對手陣營也中招了｜重生之 Debug 博士逆轉台北</title>
+<meta name="description" content="第六章　對手陣營也中招了｜重生之 Debug 博士逆轉台北：「別管它，讓它飛。」">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第六章　對手陣營也中招了｜重生之 Debug 博士逆轉台北">
+<meta property="og:description" content="第六章　對手陣營也中招了｜重生之 Debug 博士逆轉台北：「別管它，讓它飛。」">
+<meta property="og:image" content="https://tboydar.github.io/honki-novel/images/cover-06.jpg">
+<meta property="og:url" content="https://tboydar.github.io/honki-novel/s06.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23c8322f'/><rect x='4' y='4' width='24' height='24' rx='2' fill='none' stroke='%23f4ecdc' stroke-width='2'/><text x='16' y='22' text-anchor='middle' font-size='15' font-family='serif' font-weight='700' fill='%23f4ecdc'>D</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<script>
+(function(){
+  var KEY='honki-theme';
+  try{var t=localStorage.getItem(KEY);if(t)document.documentElement.dataset.theme=t;
+    else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark';}catch(e){}
+  window.toggleTheme=function(){var r=document.documentElement;var n=r.dataset.theme==='dark'?'light':'dark';
+    r.dataset.theme=n;try{localStorage.setItem(KEY,n)}catch(e){}};
+})();
+</script>
+<style>
+:root{
+  --bg:#f4ecdc; --card:#fbf6ea; --ink:#141210; --muted:#5f574b; --line:rgba(20,18,16,.18);
+  --seal:#c8322f; --gold:#c9962e; --panel:#141210; --on-panel:#f4ecdc;
+  --dot:radial-gradient(rgba(20,18,16,.10) 1px,transparent 1.2px);
+  --hard:4px 4px 0 var(--ink);
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#15120f; --card:#1f1a15; --ink:#efe6d4; --muted:#b3a893; --line:rgba(239,230,212,.18);
+  --seal:#e04b3f; --gold:#d9a93f; --panel:#0c0a08; --on-panel:#efe6d4;
+  --dot:radial-gradient(rgba(239,230,212,.07) 1px,transparent 1.2px);
+  --hard:4px 4px 0 #000;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);background-image:var(--dot);background-size:7px 7px;
+  font-family:'Noto Serif TC','Songti TC','PMingLiU',serif;line-height:1.95;text-wrap:pretty}
+a{color:var(--seal);text-underline-offset:.2em}
+img{max-width:100%;display:block}
+.display{font-family:'LXGW WenKai TC','Noto Serif TC',serif}
+.seal{display:inline-block;background:var(--seal);color:#f4ecdc;border-radius:3px;padding:.02rem .5rem;
+  font-size:.82rem;letter-spacing:.14em;font-family:'LXGW WenKai TC',serif;box-shadow:inset 0 0 0 2px rgba(244,236,220,.35)}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:2px solid var(--ink)}
+.topbar .wrap{max-width:68rem;margin:0 auto;padding:.45rem 1rem;display:flex;align-items:center;gap:.6rem}
+.topbar .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:.04em;flex:1;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .brand b{color:var(--seal)}
+.tbtn{all:unset;cursor:pointer;border:2px solid var(--ink);border-radius:4px;padding:.1rem .6rem;min-height:1.9rem;
+  font-size:.85rem;color:var(--ink);white-space:nowrap;display:inline-flex;align-items:center;transition:transform .16s ease-out,box-shadow .16s ease-out}
+.tbtn:hover{transform:translate(-1px,-1px);box-shadow:2px 2px 0 var(--ink)}
+.tbtn:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;padding:.45rem 1.2rem;border:2px solid var(--ink);border-radius:4px;
+  font-weight:700;letter-spacing:.08em;text-decoration:none;color:var(--ink);background:var(--card);box-shadow:var(--hard);
+  transition:transform .16s ease-out,box-shadow .16s ease-out;cursor:pointer;font:inherit;font-weight:700}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.primary{background:var(--seal);color:#f4ecdc}
+footer.site{border-top:2px solid var(--ink);margin-top:3.5rem;padding:1.6rem 1rem 2.2rem;text-align:center;
+  color:var(--muted);font-size:.85rem;line-height:1.9}
+footer.site p{margin:.2rem auto;max-width:46rem}
+footer.site .ver{letter-spacing:.14em;font-family:'LXGW WenKai TC',serif}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+.progress{position:fixed;left:0;top:0;height:4px;background:var(--seal);width:0;z-index:40}
+main.read{max-width:40rem;margin:0 auto;padding:1.4rem 1.1rem 2rem}
+.cover{margin:0 0 1.4rem}
+.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;border:3px solid var(--ink);box-shadow:var(--hard)}
+.kicker{display:flex;align-items:center;gap:.6rem;margin:0 0 .2rem;color:var(--muted);font-size:.92rem;flex-wrap:wrap}
+h1.title{font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.35;margin:.3rem 0 .4rem;letter-spacing:.02em}
+.when{color:var(--muted);margin:0 0 1.8rem;font-size:.95rem}
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 1.6rem}
+article.body{font-size:var(--fs,1.1rem)}
+article.body p{margin:0 0 1.15em;text-align:justify;transition:background .2s}
+article.body p.speaking{background:color-mix(in srgb,var(--gold) 22%,transparent)}
+article.body .sys{margin:1.4em 0;padding:.65em 1em;border-radius:3px;background:var(--panel);color:#f2d27a;
+  font-family:'LXGW WenKai TC','Noto Serif TC',serif;font-weight:700;font-size:.98em;line-height:1.7;border:2px solid var(--ink);
+  box-shadow:4px 4px 0 var(--seal)}
+article.body hr.scene{border:0;text-align:center;margin:2.2em 0}
+article.body hr.scene::after{content:"◆　◇　◆";color:var(--seal);letter-spacing:.3em;font-size:.8rem}
+.world-entry{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:0 0 1.8rem;padding:.75rem 1rem;
+  border:2px dashed var(--ink);border-radius:4px;font-size:.92rem;color:var(--muted);line-height:1.7}
+.world-entry span{flex:1;min-width:12rem}
+.lesson{margin:2.8rem 0 0;border:3px solid var(--ink);border-radius:4px;background:var(--card);box-shadow:var(--hard)}
+.lesson h2{margin:0;padding:.6rem 1rem;background:var(--panel);color:var(--on-panel);font-size:1.12rem;letter-spacing:.06em}
+.lesson h2 small{display:inline-block;background:var(--seal);color:#f4ecdc;font-size:.75rem;letter-spacing:.16em;font-weight:400;
+  padding:0 .45rem;border-radius:2px;margin-right:.5rem;vertical-align:.15em}
+.lesson ul{margin:0;padding:.9rem 1.1rem .9rem 2.2rem;font-size:.98rem;line-height:1.85}
+.lesson li{margin:.35em 0}
+.lesson li::marker{color:var(--seal)}
+.lesson .more{padding:0 1.1rem 1rem;font-size:.9rem}
+.ending{margin:2.4rem 0 0;padding:1.1rem 1.2rem;border:3px double var(--seal);text-align:center;border-radius:4px}
+.ending .n{font-family:'LXGW WenKai TC',serif;font-size:1.6rem;color:var(--seal);letter-spacing:.1em}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.4rem;padding-top:1.2rem;border-top:2px solid var(--ink)}
+.pager a{text-decoration:none;font-weight:700;max-width:48%;color:var(--ink)}
+.pager a:hover{color:var(--seal)}
+.pager .r{text-align:right;margin-left:auto}
+.hint{text-align:center;color:var(--muted);font-size:.8rem;margin-top:1rem}
+.sb{position:relative;left:50%;transform:translateX(-50%);width:min(68rem,calc(100vw - 2rem));margin:0 0 2.4rem}
+.sb-h{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:0 0 .9rem;font-size:1.3rem}
+.sb-h span{background:var(--seal);color:#f4ecdc;padding:.05rem .7rem;border-radius:3px;letter-spacing:.12em}
+.sb-h small{color:var(--muted);font-size:.88rem;font-weight:400}
+.sb-h .tbtn{margin-left:auto}
+.sb-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+.sb-grid li:nth-child(4n+1) figure{transform:rotate(-.4deg)} .sb-grid li:nth-child(4n+3) figure{transform:rotate(.35deg)}
+.sb-grid figure{margin:0;background:var(--panel);border:3px solid var(--ink);border-radius:3px;overflow:hidden;box-shadow:var(--hard)}
+.sb-grid img{width:100%;height:auto;aspect-ratio:7/4;object-fit:cover}
+.sb-grid figcaption{background:#fbf6ea;color:#141210;padding:.5rem .75rem .6rem;font-family:'LXGW WenKai TC','Noto Serif TC',serif;
+  font-weight:700;font-size:1.02rem;line-height:1.55;border-top:3px solid #141210}
+.sb-grid figcaption b{display:inline-block;background:#c8322f;color:#f4ecdc;font-size:.72rem;padding:0 .45rem;margin-right:.4rem;
+  border-radius:2px;vertical-align:.15em;letter-spacing:.1em}
+.sb-grid li.on figure{box-shadow:4px 4px 0 var(--seal);outline:3px solid var(--gold)}
+.sb-skip{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.86rem;margin:.7rem 0 0;color:var(--muted)}
+.comic-ch{margin:0 0 3rem}
+.comic-ch h2{font-size:1.3rem;margin:0 0 .8rem}
+.comic-ch h2 a{color:var(--ink);text-decoration:none}
+</style>
+</head>
+<body><div class="progress"></div><header class="topbar"><div class="wrap">
+<a class="brand display" href="index.html">《<b>重生之 Debug 博士</b>逆轉台北》</a>
+<button class="tbtn" onclick="cycleFont()" aria-label="調整字級">字級</button><button class="tbtn" onclick="toggleTheme()" aria-label="切換深色模式">◐</button>
+</div></header>
+<main class="read">
+<figure class="cover"><img src="images/cover-06.jpg" alt="第六章　對手陣營也中招了 插圖"></figure>
+<p class="kicker"><span class="seal">第六章</span><span>約 2,652 字</span></p>
+<h1 class="title display">對手陣營也中招了</h1>
+<p class="when">時間：2026 年 11 月 14 日</p>
+<section class="sb" aria-label="一分鐘爽讀">
+<h2 class="sb-h display"><span>一分鐘爽讀</span><small>8 格漫劇分鏡，先爽再讀</small><button class="tbtn" data-sb-audio="audio/sb-06.mp3" aria-label="播放本章旁白">▶ 聽旁白</button></h2>
+<ol class="sb-grid">
+<li><figure><img src="images/sb/06-1.jpg" alt="「別管它，讓它飛。」" loading="lazy" width="896" height="512"><figcaption><b>01・鉤子</b>「別管它，讓它飛。」</figcaption></figure></li>
+<li><figure><img src="images/sb/06-2.jpg" alt="「反正燒的不是我們這邊。」" loading="lazy" width="896" height="512"><figcaption><b>02・壓</b>「反正燒的不是我們這邊。」</figcaption></figure></li>
+<li><figure><img src="images/sb/06-3.jpg" alt="「這對我們有利啊，什麼都不做就贏。」" loading="lazy" width="896" height="512"><figcaption><b>03・壓</b>「這對我們有利啊，什麼都不做就贏。」</figcaption></figure></li>
+<li><figure><img src="images/sb/06-4.jpg" alt="「我們守護的是選舉，不是輸贏。」" loading="lazy" width="896" height="512"><figcaption><b>04・轉</b>「我們守護的是選舉，不是輸贏。」</figcaption></figure></li>
+<li><figure><img src="images/sb/06-5.jpg" alt="【叮！偵測到合成語音，真實度：4.7%】" loading="lazy" width="896" height="512"><figcaption><b>05・爽</b>【叮！偵測到合成語音，真實度：4.7%】</figcaption></figure></li>
+<li><figure><img src="images/sb/06-6.jpg" alt="「報告公開，一份不留，連對手也給。」" loading="lazy" width="896" height="512"><figcaption><b>06・打臉</b>「報告公開，一份不留，連對手也給。」</figcaption></figure></li>
+<li><figure><img src="images/sb/06-7.jpg" alt="「修 bug 這種事，需要我們都在。」" loading="lazy" width="896" height="512"><figcaption><b>07・情緒</b>「修 bug 這種事，需要我們都在。」</figcaption></figure></li>
+<li><figure><img src="images/sb/06-8.jpg" alt="「你阿嬤的滷肉飯，我吃過。很好吃。」" loading="lazy" width="896" height="512"><figcaption><b>08・卡點</b>「你阿嬤的滷肉飯，我吃過。很好吃。」</figcaption></figure></li>
+</ol>
+<p class="sb-skip"><span>旁白為 AI 合成配音，非任何真人聲音</span><a href="#body">↓ 讀完整正文</a></p>
+</section>
+<div class="tools"><button class="tbtn" id="readAloud" aria-label="用裝置語音朗讀全文">朗讀全文</button><a class="tbtn" href="world/">3D 多重世界線 →</a></div>
+<article class="body" id="body">
+<p>「別管它，讓它飛。」</p>
+<p>這句話讓整間辦公室的空氣瞬間凝固。說話的是聯盟裡一位立場鮮明的志工，他盯著手機上那支瘋傳的假錄音，嘴角竟然上揚。「反正燒的不是我們這邊，這對我們有利。」</p>
+<p>Debug 博士把焊到一半的電路板放下，烙鐵還冒著煙。</p>
+<p>十一月的台北，深夜十一點四十七分。桌上三杯超商咖啡，兩杯冷掉，一杯根本沒開封。他盯著螢幕上的開源模型訓練曲線，圓框眼鏡片上跳著艾莉絲的迷你全息影像。她正盤腿坐在他視線右上角，像個在夜市板凳上等鹽酥雞的少女，帽 T 的袖子長到蓋住手指。</p>
+<p>「哥，你這條曲線比你前世那次相親的進展還平。」</p>
+<p>「我什麼時候去相親了？」</p>
+<p>「二〇四三年啊，對方研究量子材料，你們聊了四十分鐘散熱問題。」</p>
+<p>「……那段記憶我寧願被吃掉。」</p>
+<p>話才說完，桌上六支手機同時震動，像一群被踩到尾巴的電子雞。群組訊息以每分鐘四十則往上衝，貼圖、語音、驚嘆號，還有長輩圖等級的「緊急！快看！」。</p>
+<p>阿凱從沙發彈起來，頭髮像被靜電打到。「程博士，出事了。」</p>
+<p>「哪一種出事？」</p>
+<p>「對手陣營的候選人，被爆出一段錄音。」阿凱把手機轉過來。「內容我不用念，反正就是那種一句話就能毀掉一個人的假話。」</p>
+<p>錄音品質刻意做得很差，像隔著一道牆偷錄。聲音學得極像，連說話時習慣性的停頓都抓到了。Debug 博士只聽八秒，按下暫停。</p>
+<p>「假的。」</p>
+<p>「你這麼確定？」</p>
+<p>「背景有捷運進站音樂。」他推了推眼鏡。「但錄音裡說的時間，當事人正在另一場公開活動，好幾家媒體都有直播畫面。做假的人忙著學聲音，忘了學行程。」</p>
+<p>然後，那位志工笑了。</p>
+<p>「這對我們有利啊。」他壓低聲音，笑得像撿到錢。「別管它，讓它飛。反正燒的不是我們家。」</p>
+<p>「對啊，」另一個接話，「我們什麼都不做，就是最大贏家。」</p>
+<p>空氣裡有一種很微妙的氣味，不是咖啡，是那種「別人的災難剛好是我的運氣」的竊喜。</p>
+<p>Debug 博士站起來。</p>
+<p>他沒有大吼，只是把桌上那杯沒開封的咖啡，「啪」地一聲放平在桌面。力道不大，但整間辦公室瞬間安靜。</p>
+<p>「你們剛剛那句話，」他慢慢轉頭，眼神像在 debug 一段爛程式碼，「我前世的台北，聽了三十五年。」</p>
+<p>「程博士……」</p>
+<p>「深偽今天打他，明天就打我們，後天打的是全台北。」他一個字一個字說。「我們守護的是選舉，不是輸贏。」</p>
+<p>那位志工還想辯：「可是這是對手的災難耶，我們不出手也……」</p>
+<p>「你現在覺得是災難。」Debug 博士打斷他。「等到有一天，有人用我的臉、用你媽的名字做一支影片，你還會覺得『讓它飛』很好玩嗎？」</p>
+<p>沒人講話。那位志工低下頭，把手機收進口袋，耳根紅了一片。</p>
+<p>「我們來 debug 一下。」他拿起手機。「這個社會的 bug，不是哪一個陣營說謊，是我們開始覺得『反正不是我被騙』就沒關係。這個 bug 不修，二〇六一年我們全都會被它吃掉。」</p>
+<p>他轉頭。「曉晴呢？」</p>
+<p>「我在。」</p>
+<p>林曉晴站在門口，外套都還沒脫，肩上背著一台筆電，眼睛底下有熬夜的黑眼圈，但眼神很亮。她原本是最瞧不起政治人物的那種人，這一個月卻天天睡在聯盟的沙發上。</p>
+<p>「照妖鏡的檢測流程，妳熟。」Debug 博士說。「我們連夜跑。」</p>
+<p>「跑完之後呢？」</p>
+<p>「公開。」他說得毫不猶豫。「報告公開給所有媒體、所有事實查核機構，一份不留。還有，」他停了一下，「聯絡對手陣營，問他們要不要技術協助。」</p>
+<p>整間辦公室像被按下靜音鍵。</p>
+<p>「程博士，」阿凱小心翼翼地問，「你確定？幫對手？」</p>
+<p>「我確定。」他已經在捲袖子。「選舉是一場比賽，但比賽的規則不能被拆掉。今天有人拆對手的球門，明天就會來拆我們的。我們要守的不是球門，是球場。」</p>
+<p>林曉晴看了他兩秒，然後笑了。</p>
+<p>「好。」她把筆電放上桌。「那我先講清楚，我還是很討厭政治人物。」</p>
+<p>「我知道。」</p>
+<p>「但你今天這句話，」她坐下，手指已經在鍵盤上飛，「我記下來了。」</p>
+<p>凌晨一點十二分，照妖鏡跑完第一輪。</p>
+<div class="sys">【叮！偵測到合成語音，真實度：4.7%】</div>
+<div class="sys">【關鍵特徵：背景音時序錯置、呼吸週期規律化、語尾共振峰異常】</div>
+<p>「四點七趴。」阿凱吹了聲口哨。「這比我大學微積分的出席率還低。」</p>
+<p>「你微積分被當兩次，出席率是零。」Debug 博士頭也不抬。</p>
+<p>「你不要在這種時候補刀好不好。」</p>
+<p>艾莉絲在他視線角落舉手。「哥，我比對了一千三百二十七支前世檔案，這個合成引擎的手法，跟二〇二六年十一月二十七號那批是同一套。只是這次是測試版。」</p>
+<p>Debug 博士的手指停了一下。</p>
+<p>「測試版？」</p>
+<p>「嗯。」艾莉絲難得沒有用夜市腔，聲音低了半度。「他們在練兵，哥。這支錄音不是要毀掉那個人，是要看我們會不會上鉤。」</p>
+<p>辦公室裡沒人聽得到艾莉絲，但 Debug 博士的表情變了。他盯著螢幕上那條 4.7% 的真實度曲線，像盯著一張病危通知。</p>
+<p>「那就更不能讓它飛。」他說。</p>
+<p>凌晨三點，報告出爐。十一頁，全中文，圖表清楚到連阿嬤都看得懂。每一項異常特徵都附上時間軸、頻譜圖，還有「如何自己檢查」的簡單步驟。最後一頁只有一行字：</p>
+<p>「這支錄音是假的。但下一個被做成假的，可能是你認識的人。」</p>
+<p>他按下寄出。收件人：十二家媒體、四家事實查核機構，還有對手陣營的公開聯絡信箱。</p>
+<p>「寄了。」林曉晴說。</p>
+<p>「寄了。」他回。</p>
+<p>凌晨三點四十一分，一支不具名的號碼傳了訊息進來。</p>
+<p>「我是對手陣營的幕僚，年輕的那個，你不認識我。我只想說：謝謝。我沒想到會是你們。」</p>
+<p>Debug 博士看著那行字，看了很久。</p>
+<p>他回：「修 bug 這種事，需要我們都在。」</p>
+<p>對方隔了兩分鐘，回了一個字：「好。」</p>
+<p>然後又補一句：「你們的報告寫得比我們的清楚。有點丟臉。」</p>
+<p>他笑了，回：「那下次換你們寫，我們抄。」</p>
+<p>天亮之後，網路炸了。不是因為錄音，是因為那份報告。</p>
+<p>「不分立場都該看」變成一個轉傳標籤，從科技圈傳到媽媽社團，從媽媽社團傳到計程車行的群組。有人截圖他那句「我們守護的是選舉，不是輸贏」，做成圖卡，背景還是萬華夜市的燈籠。</p>
+<p>當然，也有人罵。</p>
+<p>「吃裡扒外。」</p>
+<p>「政治變色龍。」</p>
+<p>「幫對手洗白，是不是收了什麼好處？」</p>
+<p>阿凱滑著留言，氣到差點把手機丟出去。「程博士，這些人……」</p>
+<p>「讓他們罵。」Debug 博士正在剝一顆茶葉蛋，語氣平靜得像在報天氣。「被罵不會少一塊肉。但如果有阿嬤因為這份報告，以後看到影片會多懷疑三秒，那就夠了。」</p>
+<p>「三秒？」</p>
+<p>「三秒就夠了。」他把蛋黃吃掉。「詐騙靠的是你來不及想。你多想三秒，它就少三秒的成功率。」</p>
+<p>林曉晴從筆電後面探出頭。「你這個人真的很奇怪。」</p>
+<p>「哪裡奇怪？」</p>
+<p>「你明明可以什麼都不做，撿現成的便宜。」她說，「但你偏偏選最麻煩的那條路。」</p>
+<p>「因為最麻煩的那條路，」他推了推眼鏡，「通常是唯一正確的那條。」</p>
+<p>艾莉絲在他視線角落，安靜地看著這一切。她的全息影像比平常淡了一點，像訊號不穩的電視。</p>
+<p>「哥。」</p>
+<p>「嗯？」</p>
+<p>「前世沒有這一段。」她的聲音有點飄。「我翻遍檔案，二〇二六年的十一月十四號，這一天，沒有人公開那份報告。那支錄音飛了三天，等到終於被證明是假的，已經沒有人在乎真假了，然後……」</p>
+<p>「然後什麼？」</p>
+<p>「然後就沒有人再相信任何人了。」她說。「哥，我們在改寫歷史耶。」</p>
+<p>Debug 博士放下茶葉蛋的殼，看著窗外。台北的早晨正在醒來，捷運的列車聲從遠方傳來，早餐店的鐵板滋滋作響。</p>
+<p>「那就對了。」他說。「我們在改寫歷史。」</p>
+<p>他話才說完，手機又震了一下。</p>
+<p>不是群組，不是媒體，是一則加密訊息。寄件者欄位空白，只有一個字。</p>
+<p>「——莫」</p>
+<p>Debug 博士的手指僵在半空。</p>
+<p>訊息只有兩行：</p>
+<p>「好玩嗎？三十三天倒數，我會讓你的照妖鏡，照出一個沒有人相信的城市。」</p>
+<p>「——莫」</p>
+<p>辦公室的空氣瞬間結冰。</p>
+<p>阿凱湊過來看，臉色發白。「程博士，這個莫……」</p>
+<p>「鏡淵的莫無影。」Debug 博士把手機放下，聲音很輕，卻很穩。「他來了。」</p>
+<p>林曉晴站起來。「那我們怎麼辦？」</p>
+<p>Debug 博士看著窗外，看著這座他死過一次、又回來一次的城市。他想起前世那個沒有人相信任何畫面的台北，想起秀蘭嬤那雙再也不看螢幕的眼睛。</p>
+<p>「怎麼辦？」他笑了一下，笑得有點狠。「照妖鏡照妖，他出招，我們拆招。」</p>
+<p>他轉頭。眼鏡片上，艾莉絲已經站直了身體，帽 T 的袖子還是太長，但眼神很亮。</p>
+<p>「哥，」她說，「這次我不會讓你一個人。」</p>
+<p>「我知道。」他拿起那杯終於開封的冷咖啡，一口氣喝掉半杯。「因為這次，我們有三十三天，還有整個台北。」</p>
+<p>他放下杯子。</p>
+<p>「這座城市的 bug，」他說，「從今天開始修。」</p>
+<p>窗外，太陽升起來了。</p>
+<p>但所有人都知道，真正的黑夜，還沒來。</p>
+<p>——因為那則加密訊息的最後，還有一行極小的字，小到 Debug 博士剛才差點漏看：</p>
+<p>「順帶一提，你阿嬤的滷肉飯，我吃過。很好吃。」</p>
+</article>
+
+<aside class="lesson" id="lesson-06">
+<h2 class="display"><small>Debug 小教室</small>選罷法怎麼管深偽？</h2>
+<ul>
+<li>《公職人員選舉罷免法》第 104 條：意圖使候選人當選或不當選，散布謠言或傳播不實之事，足以生損害於公眾或他人者，處五年以下有期徒刑。</li>
+<li>同條第二項：如果是用候選人本人的<strong>深度偽造聲音、影像</strong>來犯這個罪，處<strong>七年以下</strong>有期徒刑；<strong>意圖營利</strong>者，加重其刑至二分之一，並得併科新臺幣二百萬元以上一千萬元以下罰金。</li>
+<li>法律所稱「深度偽造」，是指以電腦合成或其他科技方法製作本人不實之言行，並足使他人誤信為真之技術表現形式；在選舉期間，候選人發現自己的深偽影音被刊播，可以向警察機關申請鑑識。</li>
+<li>給一般人的提醒：<strong>轉傳也可能構成「散布」</strong>。不確定真假的選舉訊息，不要轉；看到了，可以向平台檢舉，或交給事實查核機構。</li>
+</ul>
+<p class="more"><a href="lessons.html">→ 看全部的Debug 小教室</a></p>
+</aside>
+<nav class="pager"><a rel="prev" href="s05.html">← 第五章</a><a rel="next" class="r" href="s07.html">第七章 →</a></nav>
+<p class="hint">鍵盤 ← → 可翻章</p>
+</main>
+<footer class="site">
+<p>《重生之 Debug 博士逆轉台北》為架空小說，人物、組織、事件純屬虛構，不影射任何真實人物。</p>
+<p>本站非競選廣告，未受任何候選人、政黨或競選團隊出資或委託，與任何陣營無關。</p>
+<p>由人類企劃與編輯，搭配 AI 工具協作生成文字與插圖。小說文字與插圖採 CC BY-NC-SA 4.0；網站程式碼採 MIT 授權。</p>
+<p class="ver">v20261029.3</p>
+</footer><script>
+(function(){
+  var bar=document.querySelector('.progress');
+  function upd(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+'%';}
+  addEventListener('scroll',upd,{passive:true});upd();
+  document.addEventListener('keydown',function(e){
+    if(e.altKey||e.ctrlKey||e.metaKey||/input|textarea/i.test(e.target.tagName))return;
+    var a=e.key==='ArrowLeft'?document.querySelector('a[rel=prev]'):e.key==='ArrowRight'?document.querySelector('a[rel=next]'):null;
+    if(a){location.href=a.href;}
+  });
+  var KEY='honki-fs',sizes=['1rem','1.08rem','1.18rem','1.3rem'],i=1;
+  try{var s=localStorage.getItem(KEY);if(s!==null)i=+s;}catch(e){}
+  function apply(){document.documentElement.style.setProperty('--fs',sizes[i]);}
+  apply();
+  window.cycleFont=function(){i=(i+1)%sizes.length;apply();try{localStorage.setItem(KEY,i)}catch(e){}};
+  /* 分鏡旁白：依播放進度依序點亮格子 */
+  document.querySelectorAll('[data-sb-audio]').forEach(function(b){
+    var au=new Audio(b.dataset.sbAudio), li=b.closest('.sb').querySelectorAll('.sb-grid li');
+    function mark(){var n=li.length,k=au.duration?Math.min(n-1,Math.floor(au.currentTime/au.duration*n)):0;
+      li.forEach(function(x,j){x.classList.toggle('on',j===k&&!au.paused);});}
+    au.addEventListener('timeupdate',mark);
+    au.addEventListener('ended',function(){b.textContent='▶ 聽旁白';li.forEach(function(x){x.classList.remove('on');});});
+    b.addEventListener('click',function(){if(au.paused){au.play();b.textContent='❚❚ 暫停旁白';}else{au.pause();b.textContent='▶ 聽旁白';mark();}});
+  });
+  /* 裝置語音朗讀全文（使用讀者裝置內建語音） */
+  var rb=document.getElementById('readAloud');
+  if(rb&&'speechSynthesis' in window){
+    var ps=[].slice.call(document.querySelectorAll('article.body p, article.body .sys')),idx=0,on=false;
+    function voice(){var v=speechSynthesis.getVoices();return v.find(function(x){return /zh[-_]TW/i.test(x.lang)})||v.find(function(x){return /^zh/i.test(x.lang)});}
+    function stop(){on=false;speechSynthesis.cancel();ps.forEach(function(p){p.classList.remove('speaking');});rb.textContent='朗讀全文';}
+    function next(){if(!on||idx>=ps.length){stop();return;}var p=ps[idx];ps.forEach(function(x){x.classList.toggle('speaking',x===p);});
+      var u=new SpeechSynthesisUtterance(p.textContent);u.lang='zh-TW';var v=voice();if(v)u.voice=v;u.rate=1.05;
+      u.onend=function(){idx++;next();};speechSynthesis.speak(u);}
+    rb.addEventListener('click',function(){if(on){stop();return;}on=true;idx=0;rb.textContent='停止朗讀';next();});
+  }else if(rb){rb.hidden=true;}
+})();
+</script>
+</body>
+</html>

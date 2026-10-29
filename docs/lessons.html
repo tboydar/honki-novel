@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Debug 小教室｜重生之 Debug 博士逆轉台北</title>
+<meta name="description" content="十三堂防詐、深偽辨識、資料素養與選舉法規常識，跟著小說一起學。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Debug 小教室｜重生之 Debug 博士逆轉台北">
+<meta property="og:description" content="十三堂防詐、深偽辨識、資料素養與選舉法規常識，跟著小說一起學。">
+<meta property="og:image" content="https://tboydar.github.io/honki-novel/images/banner.jpg">
+<meta property="og:url" content="https://tboydar.github.io/honki-novel/lessons.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23c8322f'/><rect x='4' y='4' width='24' height='24' rx='2' fill='none' stroke='%23f4ecdc' stroke-width='2'/><text x='16' y='22' text-anchor='middle' font-size='15' font-family='serif' font-weight='700' fill='%23f4ecdc'>D</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<script>
+(function(){
+  var KEY='honki-theme';
+  try{var t=localStorage.getItem(KEY);if(t)document.documentElement.dataset.theme=t;
+    else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark';}catch(e){}
+  window.toggleTheme=function(){var r=document.documentElement;var n=r.dataset.theme==='dark'?'light':'dark';
+    r.dataset.theme=n;try{localStorage.setItem(KEY,n)}catch(e){}};
+})();
+</script>
+<style>
+:root{
+  --bg:#f4ecdc; --card:#fbf6ea; --ink:#141210; --muted:#5f574b; --line:rgba(20,18,16,.18);
+  --seal:#c8322f; --gold:#c9962e; --panel:#141210; --on-panel:#f4ecdc;
+  --dot:radial-gradient(rgba(20,18,16,.10) 1px,transparent 1.2px);
+  --hard:4px 4px 0 var(--ink);
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#15120f; --card:#1f1a15; --ink:#efe6d4; --muted:#b3a893; --line:rgba(239,230,212,.18);
+  --seal:#e04b3f; --gold:#d9a93f; --panel:#0c0a08; --on-panel:#efe6d4;
+  --dot:radial-gradient(rgba(239,230,212,.07) 1px,transparent 1.2px);
+  --hard:4px 4px 0 #000;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);background-image:var(--dot);background-size:7px 7px;
+  font-family:'Noto Serif TC','Songti TC','PMingLiU',serif;line-height:1.95;text-wrap:pretty}
+a{color:var(--seal);text-underline-offset:.2em}
+img{max-width:100%;display:block}
+.display{font-family:'LXGW WenKai TC','Noto Serif TC',serif}
+.seal{display:inline-block;background:var(--seal);color:#f4ecdc;border-radius:3px;padding:.02rem .5rem;
+  font-size:.82rem;letter-spacing:.14em;font-family:'LXGW WenKai TC',serif;box-shadow:inset 0 0 0 2px rgba(244,236,220,.35)}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:2px solid var(--ink)}
+.topbar .wrap{max-width:68rem;margin:0 auto;padding:.45rem 1rem;display:flex;align-items:center;gap:.6rem}
+.topbar .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:.04em;flex:1;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .brand b{color:var(--seal)}
+.tbtn{all:unset;cursor:pointer;border:2px solid var(--ink);border-radius:4px;padding:.1rem .6rem;min-height:1.9rem;
+  font-size:.85rem;color:var(--ink);white-space:nowrap;display:inline-flex;align-items:center;transition:transform .16s ease-out,box-shadow .16s ease-out}
+.tbtn:hover{transform:translate(-1px,-1px);box-shadow:2px 2px 0 var(--ink)}
+.tbtn:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;padding:.45rem 1.2rem;border:2px solid var(--ink);border-radius:4px;
+  font-weight:700;letter-spacing:.08em;text-decoration:none;color:var(--ink);background:var(--card);box-shadow:var(--hard);
+  transition:transform .16s ease-out,box-shadow .16s ease-out;cursor:pointer;font:inherit;font-weight:700}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.primary{background:var(--seal);color:#f4ecdc}
+footer.site{border-top:2px solid var(--ink);margin-top:3.5rem;padding:1.6rem 1rem 2.2rem;text-align:center;
+  color:var(--muted);font-size:.85rem;line-height:1.9}
+footer.site p{margin:.2rem auto;max-width:46rem}
+footer.site .ver{letter-spacing:.14em;font-family:'LXGW WenKai TC',serif}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+.progress{position:fixed;left:0;top:0;height:4px;background:var(--seal);width:0;z-index:40}
+main.read{max-width:40rem;margin:0 auto;padding:1.4rem 1.1rem 2rem}
+.cover{margin:0 0 1.4rem}
+.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;border:3px solid var(--ink);box-shadow:var(--hard)}
+.kicker{display:flex;align-items:center;gap:.6rem;margin:0 0 .2rem;color:var(--muted);font-size:.92rem;flex-wrap:wrap}
+h1.title{font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.35;margin:.3rem 0 .4rem;letter-spacing:.02em}
+.when{color:var(--muted);margin:0 0 1.8rem;font-size:.95rem}
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 1.6rem}
+article.body{font-size:var(--fs,1.1rem)}
+article.body p{margin:0 0 1.15em;text-align:justify;transition:background .2s}
+article.body p.speaking{background:color-mix(in srgb,var(--gold) 22%,transparent)}
+article.body .sys{margin:1.4em 0;padding:.65em 1em;border-radius:3px;background:var(--panel);color:#f2d27a;
+  font-family:'LXGW WenKai TC','Noto Serif TC',serif;font-weight:700;font-size:.98em;line-height:1.7;border:2px solid var(--ink);
+  box-shadow:4px 4px 0 var(--seal)}
+article.body hr.scene{border:0;text-align:center;margin:2.2em 0}
+article.body hr.scene::after{content:"◆　◇　◆";color:var(--seal);letter-spacing:.3em;font-size:.8rem}
+.world-entry{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:0 0 1.8rem;padding:.75rem 1rem;
+  border:2px dashed var(--ink);border-radius:4px;font-size:.92rem;color:var(--muted);line-height:1.7}
+.world-entry span{flex:1;min-width:12rem}
+.lesson{margin:2.8rem 0 0;border:3px solid var(--ink);border-radius:4px;background:var(--card);box-shadow:var(--hard)}
+.lesson h2{margin:0;padding:.6rem 1rem;background:var(--panel);color:var(--on-panel);font-size:1.12rem;letter-spacing:.06em}
+.lesson h2 small{display:inline-block;background:var(--seal);color:#f4ecdc;font-size:.75rem;letter-spacing:.16em;font-weight:400;
+  padding:0 .45rem;border-radius:2px;margin-right:.5rem;vertical-align:.15em}
+.lesson ul{margin:0;padding:.9rem 1.1rem .9rem 2.2rem;font-size:.98rem;line-height:1.85}
+.lesson li{margin:.35em 0}
+.lesson li::marker{color:var(--seal)}
+.lesson .more{padding:0 1.1rem 1rem;font-size:.9rem}
+.ending{margin:2.4rem 0 0;padding:1.1rem 1.2rem;border:3px double var(--seal);text-align:center;border-radius:4px}
+.ending .n{font-family:'LXGW WenKai TC',serif;font-size:1.6rem;color:var(--seal);letter-spacing:.1em}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.4rem;padding-top:1.2rem;border-top:2px solid var(--ink)}
+.pager a{text-decoration:none;font-weight:700;max-width:48%;color:var(--ink)}
+.pager a:hover{color:var(--seal)}
+.pager .r{text-align:right;margin-left:auto}
+.hint{text-align:center;color:var(--muted);font-size:.8rem;margin-top:1rem}
+.sb{position:relative;left:50%;transform:translateX(-50%);width:min(68rem,calc(100vw - 2rem));margin:0 0 2.4rem}
+.sb-h{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:0 0 .9rem;font-size:1.3rem}
+.sb-h span{background:var(--seal);color:#f4ecdc;padding:.05rem .7rem;border-radius:3px;letter-spacing:.12em}
+.sb-h small{color:var(--muted);font-size:.88rem;font-weight:400}
+.sb-h .tbtn{margin-left:auto}
+.sb-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+.sb-grid li:nth-child(4n+1) figure{transform:rotate(-.4deg)} .sb-grid li:nth-child(4n+3) figure{transform:rotate(.35deg)}
+.sb-grid figure{margin:0;background:var(--panel);border:3px solid var(--ink);border-radius:3px;overflow:hidden;box-shadow:var(--hard)}
+.sb-grid img{width:100%;height:auto;aspect-ratio:7/4;object-fit:cover}
+.sb-grid figcaption{background:#fbf6ea;color:#141210;padding:.5rem .75rem .6rem;font-family:'LXGW WenKai TC','Noto Serif TC',serif;
+  font-weight:700;font-size:1.02rem;line-height:1.55;border-top:3px solid #141210}
+.sb-grid figcaption b{display:inline-block;background:#c8322f;color:#f4ecdc;font-size:.72rem;padding:0 .45rem;margin-right:.4rem;
+  border-radius:2px;vertical-align:.15em;letter-spacing:.1em}
+.sb-grid li.on figure{box-shadow:4px 4px 0 var(--seal);outline:3px solid var(--gold)}
+.sb-skip{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.86rem;margin:.7rem 0 0;color:var(--muted)}
+.comic-ch{margin:0 0 3rem}
+.comic-ch h2{font-size:1.3rem;margin:0 0 .8rem}
+.comic-ch h2 a{color:var(--ink);text-decoration:none}
+</style>
+</head>
+<body><header class="topbar"><div class="wrap">
+<a class="brand display" href="index.html">《<b>重生之 Debug 博士</b>逆轉台北》</a>
+<button class="tbtn" onclick="toggleTheme()" aria-label="切換深色模式">◐</button>
+</div></header>
+<main class="read">
+<p class="kicker"><span class="seal">附錄</span><span>十三堂實用課</span></p>
+<h1 class="title display">Debug 小教室</h1>
+<p class="when">小說是虛構的，這裡的知識是真的。防詐、深偽辨識、資料素養、選舉法規常識——每章一堂，五分鐘學會。</p>
+<aside class="lesson" id="lesson-00">
+<h2 class="display"><small>Debug 小教室</small>什麼是「後真相」？</h2>
+<ul>
+<li>「後真相」（post-truth）是 2016 年牛津詞典的年度詞彙，意思是：比起客觀事實，情緒與個人信念更能左右輿論。</li>
+<li>深偽（deepfake）最可怕的不只是「假的變成真的」，還有「真的被說成假的」——學者稱為「騙子紅利」：當大家都知道影片可以造假，做錯事的人就能把真實證據推給「那是 AI 做的」。</li>
+<li>所以對抗深偽的終點不是「什麼都不信」，而是「知道怎麼查」。這本小說每一章的小教室，就是一個查證工具。</li>
+</ul>
+
+<p class="more"><a href="s00.html">→ 閱讀對應章節：序章　八十歲的我，死在後真相的台北</a></p></aside><aside class="lesson" id="lesson-01">
+<h2 class="display"><small>Debug 小教室</small>三個查證習慣，從今天開始</h2>
+<ul>
+<li><strong>看來源</strong>：是誰發的？是第一手的記者、機關，還是「朋友的朋友說」？沒有來源的截圖，先打問號。</li>
+<li><strong>看細節</strong>：時間、地點、天氣、招牌文字、口型和聲音對不對得上。很多「突發新聞」其實是舊影片、別國影片重新上字幕。</li>
+<li><strong>反向搜圖</strong>：把截圖丟進以圖搜圖工具，常常一秒就能找到「原始出處」與真正的日期。</li>
+<li>拿不準的時候，可以查台灣事實查核中心、MyGoPen，或在 LINE 加入 Cofacts「真的假的」機器人，把訊息轉給它問。</li>
+</ul>
+
+<p class="more"><a href="s01.html">→ 閱讀對應章節：第一章　重生！距離投票日還有三十三天</a></p></aside><aside class="lesson" id="lesson-02">
+<h2 class="display"><small>Debug 小教室</small>跟 AI 說話的四個要素</h2>
+<ul>
+<li><strong>角色</strong>：請它扮演誰（例如「你是國中理化老師」）。</li>
+<li><strong>背景</strong>：給它必要的情境（對象是誰、目的是什麼）。</li>
+<li><strong>任務</strong>：具體說要做什麼（「用三個生活例子解釋電流」）。</li>
+<li><strong>格式與限制</strong>：要多長、要不要條列、哪些不能寫；也可以加一句「不確定的地方請直接說不知道」。</li>
+<li>兩個提醒：AI 會一本正經地講錯（俗稱「幻覺」），重要資訊一定要查證；不要把密碼、身分證字號等個資貼給任何 AI。</li>
+<li>還有——任何「保證中獎」「保證獲利」的說法，不管是誰講的、是不是 AI 算的，都是詐騙的語言。</li>
+</ul>
+
+<p class="more"><a href="s02.html">→ 閱讀對應章節：第二章　我是全台北最頂級的科技預言家，但我多了一個洋人 AI 妹妹</a></p></aside><aside class="lesson" id="lesson-03">
+<h2 class="display"><small>Debug 小教室</small>防範「語音複製」詐騙</h2>
+<ul>
+<li>現在的技術，只要幾秒鐘到幾十秒的聲音樣本，就可能合成出很像的聲音；公開影片、語音訊息、甚至一通「打錯電話」都可能被拿去當素材。</li>
+<li><strong>約一個家庭暗語</strong>：只有家人知道的一句話，電話裡遇到「出事要錢」，先問暗語。</li>
+<li><strong>掛掉，回撥</strong>：用你自己手機裡存的號碼回撥本人或其他家人確認，不要用對方給的號碼。</li>
+<li><strong>不在電話裡匯款、不交付現金或提款卡</strong>：「不能跟家人說」「現在就要」都是典型話術。</li>
+<li>有疑慮就撥 <strong>165 反詐騙諮詢專線</strong>；已經遇到要面交、被威脅，撥 <strong>110</strong> 報案。</li>
+</ul>
+
+<p class="more"><a href="s03.html">→ 閱讀對應章節：第三章　阿嬤的電話：您的孫子出事了</a></p></aside><aside class="lesson" id="lesson-04">
+<h2 class="display"><small>Debug 小教室</small>開源、開放資料與黑客松</h2>
+<ul>
+<li><strong>開源</strong>是把程式碼公開，讓任何人都能檢查、修改、再利用；但開源不等於「沒有規則」——每個專案都有授權條款（例如 MIT、GPL），使用時要遵守，包括保留原作者的著作權聲明。</li>
+<li><strong>開放資料</strong>：政府資料開放平臺（data.gov.tw）、臺北市資料大平臺（data.taipei）上有大量可下載的公共資料，交通、空氣、預算都查得到。</li>
+<li><strong>黑客松</strong>：在一兩天內組隊，用科技解決一個題目。不會寫程式也能參加——設計、企劃、田野調查、說故事，都是隊伍需要的人。</li>
+<li>公民科技社群也常舉辦定期聚會，新手可以從「旁聽一次」開始。</li>
+</ul>
+
+<p class="more"><a href="s04.html">→ 閱讀對應章節：第四章　黑客松上的一行程式碼</a></p></aside><aside class="lesson" id="lesson-05">
+<h2 class="display"><small>Debug 小教室</small>假投資詐騙的三個紅旗</h2>
+<ul>
+<li><strong>保證獲利、高報酬、穩賺不賠</strong>：正常投資一定有風險，「保證月報酬 30%」只有詐騙做得到——在紙上。</li>
+<li><strong>把你拉到私人群組或要你下載不明 APP</strong>：群組裡一堆「老師」「助教」和曬獲利截圖的「學員」，很可能全是同一夥人。</li>
+<li><strong>催促、限時、要你快點匯款</strong>：「名額只剩三個」「今天不進場就沒了」，就是不給你思考時間。</li>
+<li>名人推薦的投資廣告，絕大多數是冒用肖像甚至深偽影片。看到了，到平台檢舉，再撥 165 查證。</li>
+<li>已經匯款：立刻撥 165 或 110，保留對話紀錄、轉帳明細，越快通報越有機會攔截。</li>
+</ul>
+
+<p class="more"><a href="s05.html">→ 閱讀對應章節：第五章　我的臉，在網路上賣假幣</a></p></aside><aside class="lesson" id="lesson-06">
+<h2 class="display"><small>Debug 小教室</small>選罷法怎麼管深偽？</h2>
+<ul>
+<li>《公職人員選舉罷免法》第 104 條：意圖使候選人當選或不當選，散布謠言或傳播不實之事，足以生損害於公眾或他人者，處五年以下有期徒刑。</li>
+<li>同條第二項：如果是用候選人本人的<strong>深度偽造聲音、影像</strong>來犯這個罪，處<strong>七年以下</strong>有期徒刑；<strong>意圖營利</strong>者，加重其刑至二分之一，並得併科新臺幣二百萬元以上一千萬元以下罰金。</li>
+<li>法律所稱「深度偽造」，是指以電腦合成或其他科技方法製作本人不實之言行，並足使他人誤信為真之技術表現形式；在選舉期間，候選人發現自己的深偽影音被刊播，可以向警察機關申請鑑識。</li>
+<li>給一般人的提醒：<strong>轉傳也可能構成「散布」</strong>。不確定真假的選舉訊息，不要轉；看到了，可以向平台檢舉，或交給事實查核機構。</li>
+</ul>
+
+<p class="more"><a href="s06.html">→ 閱讀對應章節：第六章　對手陣營也中招了</a></p></aside><aside class="lesson" id="lesson-07">
+<h2 class="display"><small>Debug 小教室</small>保護你的個資，就是保護你的臉和聲音</h2>
+<ul>
+<li>開啟<strong>兩步驟驗證</strong>（或通行金鑰），就算密碼外洩，別人也很難登入。</li>
+<li>用<strong>密碼管理器</strong>，每個網站一組不同的密碼；一組密碼走天下，一個網站外洩就全倒。</li>
+<li>定期檢查你的 email 有沒有出現在外洩資料裡（例如 Have I Been Pwned 這類查詢服務）。</li>
+<li>社群上別公開身分證、完整生日、住址、孩子的學校；能辨識出你的臉部影像與聲音，也可能被當成深偽與詐騙的素材。</li>
+</ul>
+
+<p class="more"><a href="s07.html">→ 閱讀對應章節：第七章　鏡淵的真面目</a></p></aside><aside class="lesson" id="lesson-08">
+<h2 class="display"><small>Debug 小教室</small>數位遺產與 3-2-1 備份</h2>
+<ul>
+<li><strong>3-2-1 備份法</strong>：重要資料至少 <strong>3</strong> 份、存在 <strong>2</strong> 種不同媒介（例如電腦＋外接硬碟）、其中 <strong>1</strong> 份放在別的地方（例如雲端或家人那裡）。</li>
+<li>備份要<strong>定期測試還原</strong>，打不開的備份等於沒有備份。</li>
+<li>很多服務都有「帳號繼承」或「遺產聯絡人」設定，可以指定在你無法使用帳號時，由誰接手照片與資料。花五分鐘設定，是留給家人的溫柔。</li>
+<li>長輩的照片、手寫食譜、錄音，趁現在數位化——那是真正無法重來的記憶。</li>
+</ul>
+
+<p class="more"><a href="s08.html">→ 閱讀對應章節：第八章　艾莉絲快沒電了</a></p></aside><aside class="lesson" id="lesson-09">
+<h2 class="display"><small>Debug 小教室</small>為什麼選前十天不能發民調？</h2>
+<ul>
+<li>依《公職人員選舉罷免法》第 53 條，<strong>自投票日前十日起至投票時間截止前</strong>，任何人都不得以任何方式發布、報導、散布、評論或引述有關候選人或選舉的民意調查資料。</li>
+<li>以 2026 年 11 月 28 日投票為例，禁制期從 <strong>11 月 18 日</strong>開始。</li>
+<li>違反者依同法第 110 條處新臺幣十萬元以上一百萬元以下罰鍰；政黨、候選人及其受僱人等違反者，處二十萬元以上二百萬元以下罰鍰。<strong>在群組轉傳民調截圖也可能觸法。</strong></li>
+<li>禁制期間流傳的「最新內部民調」「某某機構數字」，本身就該先打個大問號。</li>
+</ul>
+
+<p class="more"><a href="s09.html">→ 閱讀對應章節：第九章　投票前十天，全城真相守夜人</a></p></aside><aside class="lesson" id="lesson-10">
+<h2 class="display"><small>Debug 小教室</small>選前夜遇到可疑訊息的 SOP：停、查、報</h2>
+<ul>
+<li><strong>停</strong>：先不要轉傳。情緒越激動的訊息，越要停三秒。</li>
+<li><strong>查</strong>：投票所、投票時間有沒有變更，以<strong>中央選舉委員會與各地方選舉委員會的官方公告</strong>為準；其他消息查事實查核機構或主流媒體的查證報導。</li>
+<li><strong>報</strong>：在平台按檢舉；涉及詐騙撥 165，涉及恐嚇或其他犯罪撥 110。</li>
+<li>「停電了」「投票所改地點」「某某人已宣布退選」——這類訊息在投票前夜最常見，也最需要查證。</li>
+</ul>
+
+<p class="more"><a href="s10.html">→ 閱讀對應章節：第十章　深偽之夜</a></p></aside><aside class="lesson" id="lesson-11">
+<h2 class="display"><small>Debug 小教室</small>投票日須知</h2>
+<ul>
+<li><strong>一定要帶國民身分證</strong>，健保卡、駕照不能代替；身分證遺失要先到戶政事務所補辦。</li>
+<li>領票時可以在選舉人名冊上<strong>蓋章、簽名或按指印</strong>；投票通知單沒帶也可以投，只要名字在選舉人名冊上。</li>
+<li>圈選要用投票所提供的圈選工具；用私章或按指印圈選，選票會無效。圈選後<strong>不要把圈選內容給別人看</strong>。</li>
+<li>手機請關機再進投票所；<strong>不可以把選票帶出投票所</strong>，也不要撕毀選票，都有罰則。</li>
+<li>投票日當天，任何人都不能從事競選或助選活動。</li>
+</ul>
+
+<p class="more"><a href="s11.html">→ 閱讀對應章節：第十一章　天亮了，台北自己選</a></p></aside><aside class="lesson" id="lesson-12">
+<h2 class="display"><small>Debug 小教室</small>給未來的台灣：媒體素養四個問題</h2>
+<ul>
+<li>這則訊息<strong>是誰做的</strong>？</li>
+<li>他<strong>為什麼</strong>要做這則訊息？想讓我相信什麼、做什麼？</li>
+<li>這則訊息<strong>少了什麼</strong>？有沒有另一方的說法、原始資料？</li>
+<li>我現在<strong>的感受</strong>是什麼？如果是憤怒或恐慌，那正是最需要查證的時候。</li>
+<li>把這四個問題教給家裡的長輩和孩子。真相不是一個人守得住的，是一座城一起守的。</li>
+</ul>
+
+<p class="more"><a href="s12.html">→ 閱讀對應章節：尾聲　2061，另一個版本的台灣</a></p></aside>
+<aside class="lesson"><h2 class="display"><small>參考資料</small>資料來源</h2><ul><li>全國法規資料庫：公職人員選舉罷免法（https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020010）</li>
+<li>中央選舉委員會（https://www.cec.gov.tw/）</li>
+<li>內政部警政署 165 全民防騙網（https://165.npa.gov.tw/）</li></ul>
+<p class="more">法規內容為一般性整理，實際適用以全國法規資料庫與中央選舉委員會公告為準。</p></aside>
+</main>
+<footer class="site">
+<p>《重生之 Debug 博士逆轉台北》為架空小說，人物、組織、事件純屬虛構，不影射任何真實人物。</p>
+<p>本站非競選廣告，未受任何候選人、政黨或競選團隊出資或委託，與任何陣營無關。</p>
+<p>由人類企劃與編輯，搭配 AI 工具協作生成文字與插圖。小說文字與插圖採 CC BY-NC-SA 4.0；網站程式碼採 MIT 授權。</p>
+<p class="ver">v20261029.3</p>
+</footer>
+</body>
+</html>
