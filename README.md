@@ -45,4 +45,4 @@ docs/audio/                   旁白音檔
 - 網站程式碼：MIT（見 LICENSE）
 - three.js：MIT（見 docs/world/vendor/THREE-LICENSE.txt）
 
-版本 v20261029.4
+版本 v20261029.4　|　[工作日誌](WORKLOG.md)　|　[結案報告](REPORT.md)
